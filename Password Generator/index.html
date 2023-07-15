@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator </title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Generate a <br><span>Strong Password</span></h1>
+    
+        <div class="inputBox">
+            <input type="text" class="passBox" name="" id="passBox" disabled>
+            <span  id="copyIcon" class="material-icons">
+                content_copy
+                </span>
+        </div>
+        <input type="range" name="" id="inputSlider" min="6" max="30" value="10">
+
+        <div class="row">
+            <p>Password Length</p>
+            <span id="sliderValue"></span>
+        </div>
+        <button class="genBtn" id="genBtn" type="button"><span class="material-icons">electric_bolt</span>  Generate Password</button>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
