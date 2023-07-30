@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg,#0a0a0a,#3a4452);
+}
+
+body.new-body{
+    background: #620976;
+    color: #ffffff;
+}
+
+.wrapper{
+    padding: 10px 20px;
+    width: 800px;
+    transition:.5s;
+}
+.wrapper.wr-non-active{
+    transform: scale(0);
+}
+
+.timerDisplay{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 25px;
+    border: none;
+    transition: transform .5s;
+}
+.timerDisplay.activeTimer{
+    transform: translateY(200px) scale(2);
+
+}
+.timerDisplay .display-row{
+    display: flex;
+    flex-direction: column;
+}
+.timerDisplay .display-row input{
+    width: 150px;
+    text-align: center;
+    height: 100px;
+    font-size: 6rem;
+    border: 1px groove #00f6ff;
+    border-radius: 20px;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    /* border-color: #05ff2b #05ff2b #00f7c9 #00f7c9; */
+    box-shadow: 0 0 10px 0px #0a0a0a;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+}
+
+.timerDisplay .display-row input:focus{
+    border: 5px groove orange;
+}
+
+
+.timerDisplay .display-row span{
+    margin-top: 10px;
+    color: #05ff2b ;
+    font-size: 1.5rem;
+}
+
+
+.inputButtons{
+    text-align: center;
+    /* padding: 1; */
+    transition: transform 1s;
+}
+
+.inputButtons.non-active{
+    transform: translateY(300px) scale(0);
+}
+.inputButtons .inputRow{
+    margin-block:25px;
+}
+
+.inputRow button{
+    width: 75px;
+    height: 75px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background: #1c1c1c;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    box-shadow: -7px 9px 15px 0px rgb(0 0 0);
+    cursor: pointer;
+    margin-inline: 10px;
+}
+
+.inputRow button:empty{
+    display: none;
+    
+}
+.inputRow .btndelete ion-icon{
+    vertical-align: middle;
+}
+
+.inputRow button:active{
+    transform:translate(2px, 2px);
+}
+
+
+.btnGroup{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.btnGroup button{
+    width: 25%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px groove;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: #1c1c1c;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    box-shadow: -7px 9px 15px 0px rgb(0 0 0);
+    cursor: pointer;
+    margin-inline: 10px;
+}
+
+.msg-wrapper{
+    position: absolute;
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+.msg-wrapper.active{
+    display: flex;
+    transform: scale(1);
+}
+
+h1{
+    font-size: 10rem;
+    transform:scale(0);
+    transition: transform 1s;
+}
+h1.active{
+    animation-name: msg;
+    animation-duration: 2s;
+    transform: scale(1);
+}
+
+@keyframes msg {
+    0%{
+        transform: scale(0);
+    }
+    25%{
+        transform: scale(0.25);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+
+}
+
+.msg-back-btn{
+    position: absolute;
+    bottom: 10px;
+    left:10px;
+    padding: 20px 30px;
+    width: 200px;
+    background: transparent;
+    outline: none;
+    border: none;
+}
+.msg-back-btn span{
+    font-size: 48px;
+    color: #fff;
+}
+
