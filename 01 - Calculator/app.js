@@ -6,12 +6,16 @@ let string = ''
 buttons.forEach(element =>{
     element.addEventListener('click', (b)=>{
         if(b.target.innerText == '='){
-         try{string = String(eval(string))
-            inputBox.value = string;}
-            catch(error){
-                inputBox.value='Syntax error';
+         string = string == '' ? '0': string;
+         try{
+            string = String(eval(string))
+         inputBox.value = string;
+         }
+         catch(error){
+            inputBox.value = "Error(Press AC)"
+         }
         }
-        else if (b.target.innerText == 'AC'){
+        else if(b.target.innerText == 'AC'){
             string = ''
             inputBox.value = string;
         }
