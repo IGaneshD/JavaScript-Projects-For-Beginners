@@ -52,6 +52,7 @@
         
         if(qrImage.src!= ""){
             imgAtrr = qrImage.getAttribute('src');
+            console.log
             downloadBtn.setAttribute("href", imgAtrr);
         }
         else{
@@ -68,7 +69,9 @@
             downloadBtn.classList.add('download-active')
             qrImage = document.querySelector('#qrContainer img');
         }
-        
+        else{
+            
+        }
         
     })
 
