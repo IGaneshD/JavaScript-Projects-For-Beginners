@@ -75,7 +75,7 @@ input {
   border: 0;
   outline: 0;
   border-radius: 5px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   margin: 15px 0;
   font-weight: 500;
