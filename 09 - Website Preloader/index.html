@@ -1042,17 +1042,14 @@
 </body>
 
 <script>
-    /**
-   * Preloader
-   */
    
    
-   let preloader = select('#preloader');
-   if (preloader) {
+   
+   let preloader = document.getElementById('preloader');
      window.addEventListener('load', () => {
-       preloader.remove()
+       preloader.style.display = "none"
      });
-   }
+   
    
 </script>
 
