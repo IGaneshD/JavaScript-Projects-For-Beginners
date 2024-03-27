@@ -9,8 +9,7 @@ body{
 }
 .inputBox{
     background: #fff;
-    width: 90%;
-    max-width: 450px;
+    max-width: 500px;
     border-radius: 5px;
     padding: 10px 20px;
     margin: 400px auto;
