@@ -1,11 +1,11 @@
-#preloader {
+#preloader{
     position: fixed;
     top: 0;
+    bottom:0;
     left: 0;
     right: 0;
-    bottom: 0;
-    z-index: 99;
     overflow: hidden;
-    background: url('loader.svg') center ;
+    z-index: 99;
+    background: #fff url('loader.svg') center no-repeat;
     background-size: 150%;
-  }
+}

@@ -39,7 +39,10 @@
 
 <body>
 
-  <div id="preloader"></div>
+  <div id="preloader">
+
+  </div>
+  
 
   <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-flex align-items-center">
@@ -1016,6 +1019,7 @@
   
   
   <iframe width="560" height="315" src="https://www.youtube.com/embed/KT4HhOW0eQ0?si=XFkSaUJCcqURaB8X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/KT4HhOW0eQ0?si=XFkSaUJCcqURaB8X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
   
 
@@ -1037,17 +1041,11 @@
   <script src="assets/js/main.js"></script>
 
 </body>
-
 <script>
-   
-   
-   
-   let preloader = document.getElementById('preloader');
-     window.addEventListener('load', () => {
-       preloader.style.display = "none"
-     });
-   
-   
-</script>
+  let preloader = document.getElementById('preloader')
 
+  window.addEventListener("load", ()=>{
+    preloader.style.display = "none"
+  })
+</script>
 </html>
