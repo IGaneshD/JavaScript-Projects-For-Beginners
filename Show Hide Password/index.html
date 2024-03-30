@@ -6,36 +6,30 @@
     <title>Password Toggle - The Code School</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
-<style>
-    
-
-</style>
-
 <body>
 
     <div class="inputBox">
-        <input type="password" name="" id="password" placeholder="Password">
-        <img src="eye-close.png" id="toggleIcon"/>
-    </div>
-    
-</body>
+        <input type="password" id="password" placeholder="Password">
 
+        <img src="eye-close.png" id="toggleIcon">
+    </div>
+
+</body>
 <script>
     let toggleIcon = document.getElementById('toggleIcon')
-
     let password = document.getElementById('password')
 
+
     toggleIcon.addEventListener('click', ()=>{
-        if(password.type == "password"){
-            password.type = "text"
-            toggleIcon.src = "eye-open.png"
+        if(password.type == 'password'){
+            password.type = 'text'
+            toggleIcon.src = 'eye-open.png'
         }
         else{
-            password.type = "password"
-            toggleIcon.src = "eye-close.png"
+            password.type = 'password'
+            toggleIcon.src = 'eye-close.png'
         }
     })
+
 </script>
 </html>
-
