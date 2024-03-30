@@ -32,7 +32,7 @@ h2 span{
     text-underline-offset: 10px;
 }
 
-.row, .passwordBox, .btn-group{
+.row, .passwordBox{
     margin:15px 0px;
     position: relative;
 }
@@ -77,12 +77,6 @@ h2 span{
     font-weight: 900;
 }
 
-
-.btn-group{
-    display: grid;
-    place-items: center;
-    position: relative;
-}
 
 button{
     position: relative;
