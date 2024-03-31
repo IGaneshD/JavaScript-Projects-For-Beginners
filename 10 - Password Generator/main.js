@@ -14,6 +14,7 @@ Array.from(checkboxes).forEach(Element  =>{
         if(e.target.innerText == 'radio_button_unchecked'){
             e.target.innerText = "task_alt"
             e.target.nextElementSibling.nextElementSibling.setAttribute('checked',"")
+            // e.target.nextElementSibling.nextElementSibling.checked = true;
         }
         else{
             e.target.innerText="radio_button_unchecked";
