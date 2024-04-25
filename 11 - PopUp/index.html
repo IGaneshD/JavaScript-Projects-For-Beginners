@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> PopUp Notification - The Code School</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PopUp Notification - The Code School </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <div class="container">
-      <button type="submit" onclick="openPopUp()" class="btn">Buy Now 🚀</button>
+        <button type="submit" id="openBtn" class="btn">Buy Now 🚀</button>
 
-      <div class="popup" id="popup">
-        <img src="icons-100-black.png"/>
-        <h2>Thank You!</h2>
-        <p>Your Order has been processed.</p>
-        <button type="button" onclick="closePopUp()">OK 🔥</button>
-      </div>
-
+        <div class="popup" id="popup">
+            <img src="icons-100-black.png">
+            <h2>Thank You!</h2>
+            <p>Your Order has been processed.</p>
+            <button id="closeBtn" type="button">Ok 🔥</button>
+        </div>
     </div>
-  </body>
 
-  <script>
+    
+</body>
 
-    openPopUp = ()=> {
-      popup.classList.add("active-popup");
-    };
+<script>
 
-    closePopUp = () => {
-      popup.classList.remove("active-popup");
-    };
-  </script>
+    let openBtn = document.getElementById('openBtn')
+    let closeBtn = document.getElementById('closeBtn')
+    let popup = document.getElementById('popup')
+
+    openBtn.onclick = ()=>{
+        popup.classList.add('active-popup')
+    }
+
+    closeBtn.onclick = ()=>{
+        popup.classList.remove('active-popup')
+    }
+
+</script>
+
 </html>
