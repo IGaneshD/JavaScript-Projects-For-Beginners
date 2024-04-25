@@ -23,7 +23,7 @@ createBtn.addEventListener("click", ()=>{
     inputBox.setAttribute("contenteditable", "true");
 
     let img = document.createElement('img');
-    img.src = 'delete-icons.png';
+    img.src = 'delete-icon.png';
 
     let note = document.createElement("div");
     note.className = "note";
