@@ -2,12 +2,18 @@
 let notesContainer = document.querySelector(".notes-container");
 let createBtn = document.querySelector(".btn");
 
-let notes = document.querySelectorAll(".note");
 
 window.onload = ()=>{
     if(localStorage.getItem("notes")){
         notesContainer.innerHTML = localStorage.getItem("notes")
     }
+    // Remove Empty Notes
+    let notes = document.querySelectorAll(".input-box")
+    p.forEach(Element=>{
+        if(Element.innerText==""){
+            Element.parentElement.remove()
+        }
+    })
 }
 
 function updateStorage() {
@@ -45,7 +51,7 @@ notesContainer.addEventListener("click", (e)=>{
         notes = document.querySelectorAll(".input-box");
         notes.forEach(nt =>{
             nt.onkeyup = function(){
-                updateStorage()
+                    updateStorage()
             }
         })
     }
