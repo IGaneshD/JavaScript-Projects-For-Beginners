@@ -1,0 +1,117 @@
+:root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    /* color: #fff; */
+    padding: 10px;
+
+    color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+    background-repeat: no-repeat;
+}
+
+.calculator{
+    width: 100%;
+    max-width: 600px;
+    margin-left: 15%;
+}
+
+.calculator h1{
+    font-size: 25px;
+    color: #fff;
+    border-left: 5px solid #673AB7;
+    padding: 0 0 0 30px;
+}
+.calculator h1 span{
+    font-size: 60px;
+    background: linear-gradient(45deg, #E91E63, #F06292, #BA68C8, #D1C4E9);
+    background-clip: text;
+    color: transparent;
+}
+
+.inputBox {
+    margin: 60px 0 40px;
+    padding: 35px;
+    border-radius: 10px;
+    /* background: rgba(80, 80, 80, 0.1); */
+    background: rgb(103 58 183 / 20%);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.inputBox label{
+    position: absolute;
+    top: 5px;
+    font-weight: 500;
+
+}
+
+.inputBox input{
+    color: #fff;
+    flex: 1;
+    margin-right: 20px;
+    padding: 14px 20px;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    border-radius: 5px;
+    position: relative;
+    font-weight: 500;
+    /* background: rgb(212, 212, 212); */
+    background: linear-gradient(45deg, #9C27B0, #673AB7, #009687 75%, white 75%);
+}
+
+.inputBox button{
+    padding: 15px 30px;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    color: #000000;
+    background: #ffe500;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+.inputBox input::-webkit-calendar-picker-indicator{
+    left: 0;
+    right: 0;
+    width: auto;
+    position: absolute;
+    background-position: calc(100% - 20px);
+    background-size: 25px;
+    cursor: pointer;
+}
+
+#resultDisplay{
+    font-size: 24px;
+}
+
+#resultDisplay span{
+    color: #ffe500;
+    font-weight: 500;
+}
