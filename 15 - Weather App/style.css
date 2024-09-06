@@ -59,6 +59,14 @@ body{
     cursor: pointer;
 }
 
+.app-inputs button{
+    padding: 8px 10px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
 .row{
     margin-top: 20px;
     display: flex;
