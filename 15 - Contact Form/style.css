@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: linear-gradient(#ffdad5, #fff7f9);
+    /* background: linear-gradient(135deg, #fff, #764ba270); */
+    /* background: linear-gradient(to right, #ffffff, #f3e7fd); */
+    /* background: linear-gradient(135deg, #f5e8fc, #e8dff7, #e1d2f3); */
+    /* background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
+    background: linear-gradient(#c1cafb55, #daddfa);
+    /* background: #000; */
+}
+
+.contact-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-inline: 50px;
+}
+
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-form-title h2{
+    font-weight: 600;
+    color: #311b92;
+    font-size: 40px;
+    margin-bottom: 5px;
+    /* color: #fff; */
+}
+
+.contact-form-title hr{
+    border: none;
+    width: 200px;
+    height: 5px;
+    background-color: #1A237E;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+
+    /* border: none;
+    width: 200px;
+    height: 8px;
+    background-color: #1A237E;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background: #26A69A; */
+}
+
+.inputs{
+    width: 400px;
+    height:50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 25px;
+    /* box-shadow: 0 0 7px #c9c9c9; */
+
+}
+
+.contact-form textarea{
+    height: 160px;
+    padding-top: 15px;
+    border-radius: 15px;
+}
+
+.inputs:focus{
+    border: 2px solid #303F9F;
+}
+
+.inputs::placeholder{
+    color: #56565a;
+    font-size: 14px;
+}
+
+button{
+    background: #1A237E;
+    padding: 10px 20px;
+    width: 200px;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    justify-content: space-around;
+    cursor: pointer;
+    background: linear-gradient(270deg, #3F51B5, #311B92);
+    /* background: linear-gradient(39deg, #004D40, #009688); */
+}
+
+.image-container{
+    width: 500px;
+}
+
+
+
+@media (max-width:800px){
+    .inputs{
+        width: 80vw;
+    }
+    .image-container{
+        display: none;
+    }
+}
