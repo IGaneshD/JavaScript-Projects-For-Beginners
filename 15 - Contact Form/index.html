@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - The code School</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style1.css"> -->
+</head>
+<body>
+    <div class="contact-container">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <div class="contact-form-title">
+                    <h2>Connect with Me</h2>
+                    <hr>
+                </div>
+                    <input type="hidden" name="access_key" value="107e0ee2-91f3-4984-85f4-c7f75657a30a">
+                    <input type="text" name="name"  class="inputs" placeholder="Your Name" required>
+
+                    <input type="email" name="email" class="inputs" placeholder="Your Email" required>
+                    <textarea  name="message" class="inputs" placeholder="Your Message"></textarea>
+                <button type="submit">Submit <img src="assets/arrow_icon.png" alt=""></button>
+            </form>
+        <div class="image-container">
+            <img src="assets/logo.png" id="logo" alt="message">
+            <h3>The Code School</h3>
+        </div>
+    </div>
+</body>
+</html>
