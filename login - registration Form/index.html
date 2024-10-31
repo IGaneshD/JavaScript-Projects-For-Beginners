@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="form-box">
+            <div class="form-nav">
+                <button id="lgbtn">Login</button>
+                <button id="regbtn">Register</button>
+            </div>
+            <form class="input-group" id="login" action="">
+                <input type="email" name="" id="" placeholder="Your Email">
+                <input type="password" placeholder="Your Password">
+                <button type="submit">Log In</button>
+            </form>
+            <form class="input-group" id="register" action="">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <input type="password" placeholder="Your Password">
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    let lgbtn = document.querySelector("#lgbtn");
+    let regbtn = document.querySelector("#regbtn");
+
+    let login = document.getElementById("login");
+    let register = document.getElementById("register");
+
+
+    lgbtn.addEventListener("click", ()=>{
+        login.style.left = "5px";
+        register.style.left = "300px";
+    })
+    regbtn.addEventListener("click", ()=>{
+        register.style.left = "5px";
+        login.style.left = "-300px"
+    })
+</script>
+</html>
