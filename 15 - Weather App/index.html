@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div class="app">
+        <div class="app-inputs">
+            <ion-icon name="search" id="search-icon"></ion-icon>
+            <input type="text" value="" placeholder="Search for places...">
+            <ion-icon name="close-circle" id="close-circle"></ion-icon>
+            <button type="button">Search</button>
+        </div>
+
+
+        <div class="row">
+            <div class="main">
+                <img src="images/sun.png" alt="">
+                <p>Pune</p>
+            </div>
+            <div class="info">
+                <p class="temperature">25 <sup>o</sup>C</p>
+
+                <p><img src="images/humidity-icon.png" alt=""></p>
+
+                <p><img src="images/wind-icon.png" alt=""></p>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+<script src="app.js"></script>
+</html>

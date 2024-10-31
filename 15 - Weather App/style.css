@@ -1,0 +1,86 @@
+*{
+    margin-right: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+}
+
+.app{
+    width: 550px;
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background:#fff;
+}
+
+.app-inputs{
+    display: flex;
+    align-items: center;
+    background:#e4e4e4;
+    padding-inline: 10px;
+    border: 2px solid;
+    border-radius: 24px;
+}
+
+#search-icon{
+    font-weight: 800;
+}
+
+.app-inputs img{
+    height: 16px;
+}
+
+.app-inputs input{
+    outline: none;
+    border:none;
+    background:#e4e4e4;
+    height: 40px;
+    margin-left: 2px;
+    padding: 5px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.app-inputs input::placeholder{
+    color: #000;
+    font-weight: 600;
+}
+
+#close-circle{
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+}
+
+.app-inputs button{
+    padding: 8px 10px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.row{
+    margin-top: 20px;
+    display: flex;
+}
+
+.main, .info{
+    padding: 20px;
+    border: 2px solid #e0e0e0;
+    margin-inline: 2px;
+    border-radius: 10px;
+}
+.main{
+    flex: 3;
+}
+.info{
+    flex: 2;
+}
