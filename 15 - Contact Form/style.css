@@ -7,9 +7,8 @@
 
 body{
     background: #ffe2df;
-    background-image: 
-                linear-gradient(to right, #8686863b 1px, transparent 1px), 
-                linear-gradient(to bottom, #8686863b 1px, transparent 1px);
+    background-image: linear-gradient(to right, #8686863b 1px, transparent 1px), linear-gradient(to bottom, #8686863b 1px, transparent 1px);
+
     background-size: 80px 80px;
 }
 
@@ -19,33 +18,27 @@ body{
     align-items: center;
     justify-content: space-around;
     margin-inline: 50px;
-    position: relative;
 }
-
 
 .contact-form{
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 20px;
-    border-radius: 0px;
     padding: 30px;
-    background: #ffffff;
+    background: #fff;
     box-shadow: 6px 6px 0px 0px #000;
     border: 2px solid;
 }
 
-.contact-form-title h2{
+.contact-form-title{
     font-weight: 600;
     color: #311b92;
     font-size: 30px;
     margin-bottom: 5px;
-    /* color: #fff; */
-    /* color: #C53030; */
 }
 
 .contact-form-title hr{
-    border: none;
     width: 200px;
     height: 5px;
     background-color: #1A237E;
@@ -56,31 +49,24 @@ body{
 .inputs{
     width: 400px;
     height: 55px;
-    border: none;
     outline: none;
+    border: 2px solid #000;
     padding-left: 25px;
     font-weight: 500;
-    color: #666;
-    
-    box-shadow: 4px 5px 0px 0px #000000;
-    color: #000000;
-    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 4px 5px 0 0 #000;
     font-size: 18px;
+    
 }
-
-
 
 .contact-form textarea{
     height: 160px;
     padding-top: 15px;
-    border-radius: 0px;
     resize: vertical;
 }
 
-
 .inputs:focus{
     border: 2px solid #673ab7;
-    box-shadow: 4px 5px 0px 0px #673ab74f;
+    box-shadow: 4px 5px 0 0 #673ab74f;
 }
 
 .inputs::placeholder{
@@ -91,18 +77,16 @@ body{
 button{
     padding: 15px 30px;
     width: 100%;
-    border-radius: 0px;
+    background: #f44336;
+    box-shadow: 5px 5px 0 0 #000;
     border: none;
-    color: #fff;
     display: flex;
     align-items: center;
-    font-size: 24px;
     justify-content: center;
     gap: 20px;
     cursor: pointer;
-    background: linear-gradient(90deg, #1b1f35, #4d4259);
-    background: #f44336;
-    box-shadow: 5px 5px 0px 0px #000000;
+    font-size: 24px;
+    color: #fff;
 }
 
 .image-container{
@@ -115,10 +99,7 @@ button{
 
 .image-container img#logo{
     width: 500px;
-    /* backdrop-filter: brightness(0.5); */
 }
-
-
 
 @media (max-width:800px){
     .inputs{
@@ -128,4 +109,3 @@ button{
         display: none;
     }
 }
-
