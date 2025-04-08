@@ -1,41 +1,32 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
-    background: linear-gradient(45deg, #0a0a0a, #3a4452);
     height: 100vh;
     width: 100vw;
     display: flex;
     align-items: center;
-    /* color: #fff; */
     padding: 10px;
-
-    color: rgb(255, 255, 255);
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(0,0,0)
-    )
-    rgb(0,0,0);
-    background-repeat: no-repeat;
+    background: #000;
+    color: #fff;
 }
 
 .calculator{
-    width: 100%;
     max-width: 600px;
+    width: 100%;
     margin-left: 15%;
 }
 
 .calculator h1{
     font-size: 25px;
-    color: #fff;
-    border-left: 5px solid #673AB7;
+    border-left: 5px solid #673ab7;
     padding: 0 0 0 30px;
 }
+
 .calculator h1 span{
     font-size: 60px;
     background: linear-gradient(45deg, #E91E63, #F06292, #BA68C8, #D1C4E9);
@@ -43,23 +34,21 @@ body{
     color: transparent;
 }
 
-.inputBox {
+.inputBox{
     margin: 60px 0 40px;
     padding: 35px;
+    background: rgba(103, 58, 183, .2);
     border-radius: 10px;
-    /* background: rgba(80, 80, 80, 0.1); */
-    background: rgb(103 58 183 / 20%);
-    display: flex;
-    align-items: center;
     position: relative;
+    display: flex;
 }
 
 .inputBox label{
     position: absolute;
     top: 5px;
     font-weight: 500;
-
 }
+
 
 .inputBox input{
     color: #fff;
@@ -68,27 +57,23 @@ body{
     padding: 14px 20px;
     border: 0;
     outline: 0;
-    font-size: 18px;
     border-radius: 5px;
-    position: relative;
+    font-size: 18px;
     font-weight: 500;
-    /* background: rgb(212, 212, 212); */
-    background: linear-gradient(45deg, #9C27B0, #673AB7, #009687 75%, white 75%);
+    position: relative;
+    background: linear-gradient(45deg, #9c27b0, #673ab7, #009687 75%, #fff 75%);
 }
 
 .inputBox button{
     padding: 15px 30px;
-    border-radius: 5px;
     outline: 0;
     border: 0;
-    color: #000000;
+    border-radius: 5px;
     background: #ffe500;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
 }
-
-
 
 .inputBox input::-webkit-calendar-picker-indicator{
     left: 0;
@@ -102,6 +87,7 @@ body{
 
 #resultDisplay{
     font-size: 24px;
+    visibility: hidden;
 }
 
 #resultDisplay span{
