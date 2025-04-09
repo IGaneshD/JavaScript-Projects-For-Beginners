@@ -61,6 +61,7 @@ body{
     /* color: #002765; */
     /* border-bottom: 1px solid #333; */
     color:#fff;
+    margin-block:15px;
     padding: 25px;
     background: linear-gradient(to right, #000000b9, #000000e0, #00000087);
     background: linear-gradient(45deg, #230064, #5007aa);
@@ -109,7 +110,7 @@ body{
     transition: all 0.6s;
     color: #fff;
     background: linear-gradient(to left, #da81f36b, #da81f344, #da81f320);
-    background: linear-gradient(to right, #0d0b0ea3, #000000e5, #0101018d);
+    background: linear-gradient(to right, #010101a8, #000000e5, #010101a8)
 }
 
 .btn:disabled{
@@ -121,25 +122,25 @@ body{
     color: #fff;
     font-weight: 500;
     font-size:16px;
-    width: 50%;
+    width: 40%;
     border: 0;
-    padding: 10px;
+    padding: 12px;
     margin: 20px auto 0;
-    border-radius: 20px;
+    border-radius: 12px;
     cursor: pointer;
     display: None;
-    background: #1b2d2e;
-    background: linear-gradient(to right, #000000, #1a2524);
+    background: linear-gradient(to right, #000000da, #1a2524d8);
+    /* background: #00adee; */
 }
 
 
 .correct{
-    background: #9aeabc;
-    border:2px solid #000;
+    background: #66bb6a;
+    /* border:2px solid #000; */
 }
 
 .incorrect{
-    border:2px solid #000;
+    /* border:2px solid #000; */
     background: #ff9393;
 }
 
@@ -181,3 +182,48 @@ body{
 
 
 
+ /* Experimental */
+
+.timer-box {
+    display: flex;
+    align-items: center;
+    background-color: #e0f0ff;
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-family: 'Outfit', sans-serif;
+    width: fit-content;
+  }
+  
+  .timer-box span {
+    margin-right: 8px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .timer {
+    background-color: #2f2f2f;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+
+
+
+  .time-progress {
+    width: 100%;
+    height: 6px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  
+  .time-bar {
+    height: 100%;
+    background-color: #e91e63;
+    width: 100%;
+    transition: width 1s linear;
+  }
+  
