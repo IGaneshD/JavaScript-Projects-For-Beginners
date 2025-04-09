@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(45deg, #0a0a0a, #3a4452); */
+    /* background: #111; */
+}
+
+.container{
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ring{
+    position: relative;
+    padding: 20px;
+    border-radius: 50%;
+    background: conic-gradient(white 0deg , #5106ff 0deg, #5106ff 360deg);
+    /* background: conic-gradient(white 0deg , #9f00ff 0deg, #9f00ff 360deg); */
+    margin: 10px;
+}
+
+
+.pomodoro{
+    position: relative;
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    border: 1px solid blue;
+    margin: 10px;
+    display: grid;
+    place-items: center;
+    z-index: 1;
+    background: #111;
+    z-index: 0;
+}
+
+.pomodoro span{
+    z-index: 99;
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+button{
+    padding: 10px 15px;
+    width: 100px;
+    font-weight: 600;
+}

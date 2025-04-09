@@ -7,83 +7,125 @@
 
 
 body{
-    /* background: #f9f9f9; */
-    /* background: #000000; */
-    background: #fefefe;
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    overflow: hidden;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
 }
+
+
+
+.start-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#start-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #673AB7;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+}
+
+#start-btn:hover {
+    background: #512DA8;
+}
+
 
 .app{
     background: #fff;
     width: 90%;
-    max-width: 450px;
+    max-width: 400px;
     margin: 100px auto 0;
-    border-radius: 8px;
-    padding: 8px 8px 10px;
-    border: 2px solid #000;
-    box-shadow: 2px 2px 4px #8e7474;
+    border-radius: 10px;
+    padding: 25px;
+    /* border: 2px solid #000; */
+    /* box-shadow: 0px 0px 30px #afafaf; */
+    box-shadow: 10px 10px 20px #000000;
+    display:none;
 }
 
 
 .app h1{
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     /* color: #002765; */
     /* border-bottom: 1px solid #333; */
     color:#fff;
-    padding: 30px;
-    background: #000000;
-    border-radius: 5px;
+    padding: 25px;
+    background: linear-gradient(to right, #000000b9, #000000e0, #00000087);
+    background: linear-gradient(45deg, #230064, #5007aa);
+    background: #673AB7;
+    border-radius: 10px;
     text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
 }
 
 .quiz{
     padding: 20px 0;
-
 }
 
-.quiz h2{
-    font-size: 18px;
-    color: #ffffff;
-    font-weight: 600;
-    background:#000;
-}
 
 
 .btn{
-    background: #fff;
+    background: #f8f8f8;
     color: #222;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 500;
     width: 100%;
-    border: 1px solid #222;
-    padding: 10px;
+    border: 1.5px solid #ccc;
+    padding: 15px 10px;
     margin: 10px 0;
-    text-align: left;
-    border-radius: 4px;
+    text-align: center;
+    border-radius: 12px;
     cursor: pointer;
     box-shadow: 0 0 8px #d2d2d2;
 
+
+
+    animation: fadeIn 0.5s ease-in-out;
+    animation-fill-mode: both;
+    animation-delay: 0.1s;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+
+
+
+
 .btn:hover:not([disabled]){
-    background: #222;
-    color: #fff;
     transition: all 0.6s;
+    color: #fff;
+    background: linear-gradient(to left, #da81f36b, #da81f344, #da81f320);
+    background: linear-gradient(to right, #0d0b0ea3, #000000e5, #0101018d);
 }
 
 .btn:disabled{
     cursor: no-drop;
 }
 
+
 #next-btn{
-    /* background: #001e4d; */
-    background: #000;
     color: #fff;
-    font-weight: 600;
-    width: 100%;
+    font-weight: 500;
+    font-size:16px;
+    width: 50%;
     border: 0;
     padding: 10px;
     margin: 20px auto 0;
-    border-radius: 4px;
+    border-radius: 20px;
     cursor: pointer;
     display: None;
     background: #1b2d2e;
@@ -93,8 +135,49 @@ body{
 
 .correct{
     background: #9aeabc;
+    border:2px solid #000;
 }
 
 .incorrect{
+    border:2px solid #000;
     background: #ff9393;
 }
+
+
+
+@media (max-width: 480px) {
+    .app {
+        width: 95%;
+        padding: 15px;
+    }
+    .btn {
+        font-size: 14px;
+        padding: 12px 8px;
+    }
+}
+
+
+
+
+
+
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+

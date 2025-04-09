@@ -98,12 +98,25 @@ const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 
+const startBtn = document.getElementById("start-btn");
+const startScreen = document.getElementById("start-screen");
+const quizContainer = document.getElementById("app");
+
+  startBtn.addEventListener("click", () => {
+    startScreen.style.display = "none";
+    quizContainer.style.display = "block";
+    quizContainer.classList.add("fade-in");
+  });
+
+
+
 let currentQuestionIndex = 0;
 let score = 0;
 
 
 function resetState(params) {
     nextButton.style.display = "none"
+    
 
     while(answerButtons.firstChild){
         answerButtons.removeChild(answerButtons.firstChild)
@@ -129,7 +142,6 @@ function  selectAnswer(e) {
         }
         button.disabled = true;
     });
-
     nextButton.style.display = "block";
 }
 
@@ -149,8 +161,12 @@ function showOptions(currentQuestion) {
 
 function showQuestion() {
     resetState()
+    // Force a reflow so animation restarts
     let currentQuestion = questions[currentQuestionIndex]
     let questionNo = currentQuestionIndex + 1;
+    // questionElement.classList.remove("fade-in");
+    // void questionElement.offsetWidth;
+    // questionElement.classList.add("fade-in");
     questionElement.innerHTML =  currentQuestion.question
     showOptions(currentQuestion)
 }
