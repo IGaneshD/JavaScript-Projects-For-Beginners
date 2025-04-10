@@ -1,15 +1,7 @@
 console.log("connected")
 
 const questions = [
-    {
-        question: "Which is the largest animal in the world?",
-        answers: [
-            { text: "Shark", correct: false },
-            { text: "Blue Whale", correct: true },
-            { text: "Elephant", correct: false },
-            { text: "Giraffe", correct: false }
-        ]
-    },
+
     {
         question: "What is the capital of France?",
         answers: [
@@ -17,6 +9,16 @@ const questions = [
             { text: "Berlin", correct: false },
             { text: "Paris", correct: true },
             { text: "Lisbon", correct: false }
+        ]
+    },
+
+    {
+        question: "Which is the largest animal in the world?",
+        answers: [
+            { text: "Shark", correct: false },
+            { text: "Blue Whale", correct: true },
+            { text: "Elephant", correct: false },
+            { text: "Giraffe", correct: false }
         ]
     },
     {
@@ -99,6 +101,8 @@ const timerEl = document.getElementById('timer');
 const timeBar = document.getElementById('time-bar');
 let isAnswered = false
 
+let questionNumber = document.getElementById('question-number')
+
 
 
 function ShowAnswer(){
@@ -112,8 +116,8 @@ function ShowAnswer(){
 
 
 function startTimer() {
-    let timeLeft = 3;
-    const totalTime = 3;
+    let timeLeft = 10;
+    const totalTime = 10;
 
     // Reset styles
     timerEl.innerText = timeLeft;
@@ -148,7 +152,7 @@ function startTimer() {
 
 
 
-
+const questionNumberBox = document.getElementById("question-number-box");
 
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
@@ -208,20 +212,27 @@ function showOptions(currentQuestion) {
     
 }
 
+
+
 function showQuestion() {
     startTimer()
     resetState()
     let currentQuestion = questions[currentQuestionIndex]
-    // let questionNo = currentQuestionIndex + 1;
-    
+    let questionNo = currentQuestionIndex + 1;
+    questionNumber.innerHTML = `Q. ${questionNo} of ${questions.length}`
     questionElement.innerHTML =  currentQuestion.question
     showOptions(currentQuestion)
 }
+
+
+
 
 function startQuiz() {
     nextButton.style.display = "none";
     timerEl.style.visibility = "visible";
     timeBar.style.visibility = "visible";
+    questionNumber.style.visibility = "visible";
+    
     currentQuestionIndex = -1;
     score = 0;
     ShowNextQuestion()
@@ -230,7 +241,7 @@ function startQuiz() {
 function showScore() {
     timerEl.style.visibility = "hidden";
     timeBar.style.visibility = "hidden";
-
+    questionNumber.style.visibility = "hidden"
     clearInterval(timerInterval)
     resetState();
     questionElement.innerHTML = `Score: ${score}`
