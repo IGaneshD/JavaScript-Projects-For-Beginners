@@ -9,9 +9,10 @@ buttons.forEach(element =>{
          string = string == '' ? '0': string;
          try{
             string = String(eval(string))
-         inputBox.value = string;
+            inputBox.value = string;
          }
          catch(error){
+            string = '' // fix: reset broken expression
             inputBox.value = "Error(Press AC)"
          }
         }
@@ -20,14 +21,31 @@ buttons.forEach(element =>{
             inputBox.value = string;
         }
         else if(b.target.innerText == 'DEL'){
-            string = string.substring(0,string.length-1)
-            inputBox.value = string;
+            // fix: handle error state cleanly
+            if(inputBox.value == "Error(Press AC)"){
+                string = ''
+                inputBox.value = ''
+            }else{
+                string = string.substring(0,string.length-1)
+                inputBox.value = string;
+            }
         }
         else if(b.target.id == 'plusMinus'){
-            string = String(-eval(string))
-            inputBox.value = string;
+            // fix: avoid crash on empty/invalid string
+            try{
+                string = string.trim() == '' ? '0' : string
+                string = String(-eval(string))
+                inputBox.value = string;
+            }catch(error){
+                string = ''
+                inputBox.value = "Error(Press AC)"
+            }
         }
         else{
+            // fix: if previously in error, start fresh
+            if(inputBox.value == "Error(Press AC)"){
+                string = ''
+            }
             string += b.target.innerText
             inputBox.value = string
         }
